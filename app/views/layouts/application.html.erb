@@ -42,6 +42,13 @@
   <br class="clear" />
 
   <div class="container">
+    <% if flash[:error].present? %>
+    <div class="col-10 offset-1 alert alert-danger">
+      <%= flash[:error].html_safe %>
+    </div>
+    
+    <% end %>
+
     <%= yield %>
   </div>
 
@@ -49,11 +56,11 @@
     <div class="container">
       <div class="row">
        <div class="col-6">
-         <%= link_to "Pranam, are you seeking more?", root_path, class: 'next-quote' %>
+         <%= link_to "Are you seeking more?", root_path, class: 'next-quote' %>
        </div>
 
        <div class="col-6 footer-blurb">
-          Presented by <a href="http://thefirehoseproject.com">Shilpa </a><br />
+          Built by <a href="http://thefirehoseproject.com">Shilpa </a><br />
           Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
 
     </div>
