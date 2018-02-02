@@ -12,6 +12,7 @@
     <header class="row">
     
     <div class="col-3">
+      <%= link_to root_path, class: 'logo' do %>
 
      <div class="circle">
       <br />
@@ -21,6 +22,7 @@
       <br />
       WAY
     </div>
+    <% end %>
     </div>
 
     <div class="col-4 slogan">
@@ -28,7 +30,8 @@
     </div>
 
     <div class="col-5 links">
-      <%= link_to 'Contribute', '#' %>
+      <%= link_to 'Contribute', new_quote_path %>
+      
       <%= link_to 'about', '#' %>
     </div>
 
@@ -37,19 +40,20 @@
   <hr />
 
   <br class="clear" />
+
   <div class="container">
     <%= yield %>
   </div>
 
   <div class="footer">
     <div class="container">
-      <div class="row"
+      <div class="row">
        <div class="col-6">
-         <%= link_to "Pranam, are you seeking more?","#", class: 'next-quote' %>
+         <%= link_to "Pranam, are you seeking more?", root_path, class: 'next-quote' %>
        </div>
 
        <div class="col-6 footer-blurb">
-          Diving into the world of Coding <a href="http://thefirehoseproject.com">Shilpa </a><br />
+          Presented by <a href="http://thefirehoseproject.com">Shilpa </a><br />
           Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
 
     </div>
