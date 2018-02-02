@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import "bootstrap";
 
 .clear {
@@ -41,6 +43,9 @@
   color:black;
   font-size: 25px;
   border-bottom: 1px solid #E87715;
+  font-family: 'Josefin Sans', sans-serif;
+  
+  
   }
 
 header{
@@ -49,4 +54,16 @@ header{
 
 hr{
   clear:both;
+}
+
+h1{
+  font-family: 'Josefin Sans', sans-serif;
+  
+  
+
+}
+
+h2{
+ font-family: 'Josefin Sans', sans-serif;
+ 
 }
