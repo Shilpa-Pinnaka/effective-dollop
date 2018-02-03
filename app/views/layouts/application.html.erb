@@ -25,14 +25,14 @@
     <% end %>
     </div>
 
-    <div class="col-4 slogan">
-      So, why Yoga?
+    <div class="col col-sm-4 hidden-xs-down slogan">
+      Pranaam
     </div>
 
-    <div class="col-5 links">
+    <div class="col-10 offset-1 offset-sm-0 col-sm-5  links">
       <!-- Button trigger modal -->
       <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
-
+       &nbsp;&nbsp;
       
       <%= link_to 'About', about_path %>
     </div>
@@ -55,8 +55,9 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for Quote.new do |f| %>
-         <%= f.input :saying %>
-         <%= f.input :author %>
+         <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Yoga is not about becoming super human. It's about realizing being human is super." %>
+         <br />
+         <%= f.input :author, label: "who is the author of the quote?", placeholder: "Sadhguru" %>
          
          
       
@@ -90,11 +91,12 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-       <div class="col-6">
+        <div class="col-12 col-sm-6">
+       
          <%= link_to "Are you seeking more?", root_path, class: 'next-quote' %>
        </div>
 
-       <div class="col-6 footer-blurb">
+       <div class="col-12 col-sm-6 footer-blurb">
           Built by <a href="http://thefirehoseproject.com">Shilpa </a><br />
           Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
 
